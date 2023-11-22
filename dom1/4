@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void addDays(int beginYear, int beginMonth, int beginDay, int intervalDays)
+{
+    int endDay, endMonth, endYear;
+    endDay=beginDay+intervalDays;
+    if()
+    switch(beginMonth)
+    {
+        case 2:
+        switch(beginYear)
+    }
+}
+int main() {
+    string dateStart, dateEnd;
+    int timeInterval;
+    int startYear, startMonth, startDay;
+    int endYear, endMonth, endDay;
+    cin>>startYear>>startMonth>>startDay;
+    cin>>endYear>>endMonth>>endDay;
+    cin>>timeInterval;
+    return 0;
+}
