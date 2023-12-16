@@ -16,7 +16,7 @@ void swapWord(char* text, char* word)
 			i++;
 			j++;
 		}
-		if (counter == lenght2)
+		if (counter == lenght2 && !((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z')))
 		{
 			for (int p = 0; p < lenght2; p++)
 			{
