@@ -1,0 +1,19 @@
+#include <iostream>
+
+// Функция за отпечатване на запълнен правоъгълник
+void printRectangle(int N, int M, char ch) {
+    const int rows = 25, cols = 80;
+    int startRow = (rows - N) / 2;
+    int startCol = (cols - M) / 2;
+
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            if (i >= startRow && i < startRow + N && j >= startCol && j < startCol + M) {
+                std::cout << ch;
+            } else {
+                std::cout << ' ';
+            }
+        }
+        std::cout << '\n';
+    }
+}
