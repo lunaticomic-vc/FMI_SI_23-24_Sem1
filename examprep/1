@@ -1,0 +1,25 @@
+#include <iostream>
+
+// Функция за сливане на два сортирани масива
+int* mergeSortedArrays(const int* a, int sizeA, const int* b, int sizeB) {
+    int* merged = new int[sizeA + sizeB];
+    int i = 0, j = 0, k = 0;
+
+    while (i < sizeA && j < sizeB) {
+        if (a[i] < b[j]) {
+            merged[k++] = a[i++];
+        } else {
+            merged[k++] = b[j++];
+        }
+    }
+
+    while (i < sizeA) {
+        merged[k++] = a[i++];
+    }
+
+    while (j < sizeB) {
+        merged[k++] = b[j++];
+    }
+
+    return merged;
+}
