@@ -1,0 +1,12 @@
+#include <iostream>
+
+// Функция за намиране на сумата на елементите над главния диагонал
+int sumAboveDiagonal(int** matrix, int N) {
+    int sum = 0;
+    for (int i = 0; i < N; ++i) {
+        for (int j = i + 1; j < N; ++j) {
+            sum += matrix[i][j];
+        }
+    }
+    return sum;
+}
