@@ -1,0 +1,23 @@
+#include <iostream>
+
+struct LineSegment {
+    float x1, y1; // Начална точка
+    float x2, y2; // Крайна точка
+};
+
+// Функция за изчисляване на общата дължина на две отсечки
+float commonLength(const LineSegment& a, const LineSegment& b) {
+    if (a.y1 == a.y2 && b.y1 == b.y2) { // Хоризонтални линии
+        if (a.y1 != b.y1) return -1; // Намират се на различна височина
+        float start = std::max(std::min(a.x1, a.x2), std::min(b.x1, b.x2));
+        float end = std::min(std::max(a.x1, a.x2), std::max(b.x1, b.x2));
+        return (end > start) ? (end - start) : -1;
+    } else if (a.x1 == a.x2 && b.x1 == b.x2) { // Вертикални линии
+        if (a.x1 != b.x1) return -1; // Намират се на различна позиция по хоризонталата
+        float start = std::max(std::min(a.y1, a.y2), std::min(b.y1, b.y2));
+        float end = std::min(std::max(a.y1, a.y2), std::max(b.y1, b.y2));
+        return (end > start) ? (end - start) : -1;
+    }
+
+    return -1; // Отсечките не са успоредни на координатните оси
+}
